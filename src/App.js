@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import TodoForm from "./components/TodoForm";
 import TodoList from "./components/TodoList";
+import TodoSearch from "./components/TodoSearch";
 
 function App() {
   const [todoItems, setTodoItems] = useState([]);
@@ -54,6 +55,12 @@ function App() {
     });
     setTodoItems(updatedItems);
   };
+
+  const handleSearch = (name) => {
+    let updatedItems = todoItems.filter(item => item.name.includes(name))
+    setTodoItems(updatedItems)
+  }
+
   return (
     <div className="App">
       <TodoForm
@@ -62,6 +69,7 @@ function App() {
         currentTodo={currentTodo}
         setCurrentTodo={setCurrentTodo}
       />
+      <TodoSearch handleSearch={handleSearch} />
       <TodoList
         data={todoItems}
         onDelete={handleDelete}
