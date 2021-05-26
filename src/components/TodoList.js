@@ -15,6 +15,7 @@ function TodoList(props) {
                         key={item.id}
                         item={item}
                         onDelete={props.onDelete}
+                        onEdit={props.onEdit}
                         handleCheckbox={props.handleCheckbox}
                     />
                 );
