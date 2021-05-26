@@ -3,7 +3,6 @@ import "./TodoItem.css";
 
 function TodoItem(props) {
     const { id, name, isComplete } = props.item;
-
     return (
         <li >
             <input type="checkbox" checked={isComplete} onChange={() => props.handleCheckbox(id)} />

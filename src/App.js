@@ -5,7 +5,6 @@ import TodoList from './components/TodoList';
 
 function App() {
   const [todoItems, setTodoItems] = useState([])
-
   const handleAdd = (newTodo) => {
     setTodoItems([newTodo, ...todoItems])
   }

@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { Component, useState } from 'react';
 import "./TodoForm.css"
 
 function TodoForm(props) {
     const [todoInput, setTodoInput] = useState("")
+
     const handleAddTodo = (event) => {
         event.preventDefault();
 
